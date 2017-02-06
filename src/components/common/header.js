@@ -8,10 +8,9 @@ var Header = React.createClass({
 			 			<img src="images/react.png"/>
 			 		</a>
 			 		<ul className="nav navbar-nav">
-
-			 		   <li><a href="/#about">About</a></li>
-			 			<li><a href="/">Home</a></li>
-			 			
+						<li><a href="/">Home</a></li>
+			 		   <li><a href="/#about">About</a></li> 
+			 			<li><a href="/#login">Login</a></li>
 			 		</ul>
 			 	</div>
 			 </nav>

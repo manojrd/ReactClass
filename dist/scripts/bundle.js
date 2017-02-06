@@ -31977,8 +31977,9 @@ module.exports = warning;
 module.exports = require('./lib/React');
 
 },{"./lib/React":69}],197:[function(require,module,exports){
+"use strict"
 var React = require('react');
-var About = React.createClass({displayName: "About",
+var AbouT = React.createClass({displayName: "AbouT",
 	render:function(){
 		return(
 				React.createElement("div", null, 
@@ -31998,7 +31999,7 @@ var About = React.createClass({displayName: "About",
 	}
 });
 
-module.exports= About;
+module.exports= AbouT;
 
 },{"react":196}],198:[function(require,module,exports){
 var React = require('react');
@@ -32011,10 +32012,9 @@ var Header = React.createClass({displayName: "Header",
 			 			React.createElement("img", {src: "images/react.png"})
 			 		), 
 			 		React.createElement("ul", {className: "nav navbar-nav"}, 
-
+						React.createElement("li", null, React.createElement("a", {href: "/"}, "Home")), 
 			 		   React.createElement("li", null, React.createElement("a", {href: "/#about"}, "About")), 
-			 			React.createElement("li", null, React.createElement("a", {href: "/"}, "Home"))
-			 			
+			 			React.createElement("li", null, React.createElement("a", {href: "/#login"}, "Login"))
 			 		)
 			 	)
 			 )
@@ -32041,20 +32041,56 @@ var Home = React.createClass({displayName: "Home",
 
 module.exports = Home;
 },{"react":196,"react-router":27}],200:[function(require,module,exports){
+
+var React = require('react');
+var Login = React.createClass({displayName: "Login",
+	render:function(){
+		return(
+				React.createElement("div", null, 
+					React.createElement("div", null, 
+						React.createElement("h2", null, "Login Form"), 
+						 	React.createElement("div", null, 
+						    	React.createElement("img", {className: "img-circle", src: "images/avatar2.png", alt: "Avatar", width: "304", height: "236"})
+						    ), React.createElement("hr", null), 
+						  React.createElement("div", {className: "container"}, 
+						    React.createElement("label", null, React.createElement("b", null, "Username")), React.createElement("br", null), 
+						    React.createElement("input", {type: "text", placeholder: "Enter Username", required: true}), React.createElement("br", null), React.createElement("br", null), 
+
+						    React.createElement("label", null, React.createElement("b", null, "Password")), React.createElement("br", null), 
+						    React.createElement("input", {type: "password", placeholder: "Enter Password", required: true}), React.createElement("br", null), React.createElement("br", null), 
+						        
+						    React.createElement("button", {type: "submit"}, "Login"), 
+						    React.createElement("br", null), React.createElement("br", null), React.createElement("input", {type: "checkbox", checked: "checked"}), " Remember me"
+						  ), 
+
+						  React.createElement("div", {className: "container"}, " ", React.createElement("br", null), 
+						    React.createElement("button", {type: "button"}, "Cancel"), React.createElement("br", null), React.createElement("br", null), 
+						    React.createElement("span", null, "Forgot ", React.createElement("a", {href: "#"}, "password?"))
+						  )
+					)
+				)
+			);
+	}
+});
+
+module.exports = Login;
+
+},{"react":196}],201:[function(require,module,exports){
 $ = jQuery = require('jquery');
 
 var React = require('react');
 var Home = require('./components/homePage');
 var About = require('./components/about/aboutPage');
 var Header = require('./components/common/header');
-
+var LogIn = require('./components/login/loginPage');
 var App = React.createClass({displayName: "App",
 	  render:function(){
 	  	var Child;
 
 	  	switch(this.props.route){
 	  		case 'about': Child= About ; break;
-	  		default: Child =Home;
+	  		case 'login': Child = LogIn ; break;
+	  		default: Child = Home;
 
 	  	}
 
@@ -32078,4 +32114,4 @@ window.addEventListener('hashchange',render);
 
 render()
 
-},{"./components/about/aboutPage":197,"./components/common/header":198,"./components/homePage":199,"jquery":2,"react":196}]},{},[200]);
+},{"./components/about/aboutPage":197,"./components/common/header":198,"./components/homePage":199,"./components/login/loginPage":200,"jquery":2,"react":196}]},{},[201]);

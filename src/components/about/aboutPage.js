@@ -1,5 +1,6 @@
+"use strict"
 var React = require('react');
-var About = React.createClass({
+var AbouT = React.createClass({
 	render:function(){
 		return(
 				<div>
@@ -19,4 +20,4 @@ var About = React.createClass({
 	}
 });
 
-module.exports= About;
+module.exports= AbouT;
