@@ -1,13 +1,12 @@
 {
-  "name": "psadmin",
+  "name": "react",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Cory House",
+  "author": "Manoj",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.5",
@@ -25,5 +24,15 @@
     "reactify": "^1.1.1",
     "toastr": "^2.1.0",
     "vinyl-source-stream": "^1.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manojrd/ReactClass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manojrd/ReactClass/issues"
+  },
+  "homepage": "https://github.com/manojrd/ReactClass#readme",
+  "description": ""
 }

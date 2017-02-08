@@ -7,7 +7,7 @@ var Home = React.createClass({
 		return (
 			<div className="jumbotron">
 				<h1>We am learning React Js</h1>
-				<p>You gus are awsm</p>
+				<p>You guys are awesome</p>
 			</div>
 		)
 	}
